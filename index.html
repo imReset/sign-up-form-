@@ -6,8 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
-    <h1>Hello Reeva</h1>
+    <div class="background-image"></div>
+    <p>
+      This is not a real online service! You know you need something like this
+      in your life to help you realize your deepest dreams. Sign up
+      <i>now</i> to get started
+    </p>
+    <p>You <i>know</i> you want to.</p>
+    <form action="http://httpbin.org/post" method="post">
+      <div>
+        <p>Let's Do this!</p>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name" required />
+
+        <label for="last_name">Last name:</label>
+        <input type="text" name="last_name" id="last_name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="text"
+          id="phone"
+          name="phone"
+          title="Please enter a valid zip code, example: 778-987-1234"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input
+          type="password"
+          name="confirm_password"
+          id="confirm_password"
+          required
+        />
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
   </body>
 </html>
